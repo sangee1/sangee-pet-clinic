@@ -2,10 +2,13 @@ package sangee.springframework.sangeepetclinic.services.map;
 
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
+
 import sangee.springframework.sangeepetclinic.model.Owner;
 import sangee.springframework.sangeepetclinic.services.CrudService;
 import sangee.springframework.sangeepetclinic.services.OwnerService;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements OwnerService{
 	
 	@Override

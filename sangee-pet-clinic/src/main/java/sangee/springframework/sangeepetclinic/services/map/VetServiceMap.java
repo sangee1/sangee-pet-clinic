@@ -3,9 +3,9 @@ package sangee.springframework.sangeepetclinic.services.map;
 import java.util.Set;
 
 import sangee.springframework.sangeepetclinic.model.Vet;
-import sangee.springframework.sangeepetclinic.services.CrudService;
+import sangee.springframework.sangeepetclinic.services.VetService;
 
-public class VetServiceMap extends AbstractMapService<Vet,Long> implements CrudService<Vet,Long>{
+public class VetServiceMap extends AbstractMapService<Vet,Long> implements VetService{
 	
 	@Override
 	public

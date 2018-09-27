@@ -4,9 +4,9 @@ import java.util.Set;
 
 
 import sangee.springframework.sangeepetclinic.model.Pet;
-import sangee.springframework.sangeepetclinic.services.CrudService;
+import sangee.springframework.sangeepetclinic.services.PetService;
 
-public class PetServiceMap extends AbstractMapService<Pet,Long> implements CrudService<Pet,Long>{
+public class PetServiceMap extends AbstractMapService<Pet,Long> implements PetService{
 	
 	@Override
 	public

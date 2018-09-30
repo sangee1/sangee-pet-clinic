@@ -1,4 +1,4 @@
-package bootstrap;
+package sangee.springframework.sangeepetclinic.bootstrap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 

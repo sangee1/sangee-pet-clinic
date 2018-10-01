@@ -1,20 +1,21 @@
 package sangee.springframework.sangeepetclinic.model;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class Owner extends Person {
-	private String adddress;
+	private String address;
 	private String city;
 	private String telephone;
 	
-	private Set<Pet> pets;
+	private Set<Pet> pets = new HashSet<>();
 
-	public String getAdddress() {
-		return adddress;
+	public String getAddress() {
+		return address;
 	}
 
-	public void setAdddress(String adddress) {
-		this.adddress = adddress;
+	public void setAddress(String adddress) {
+		this.address = adddress;
 	}
 
 	public String getCity() {
@@ -48,4 +49,4 @@ public class Owner extends Person {
 	
 	
 
-}
+

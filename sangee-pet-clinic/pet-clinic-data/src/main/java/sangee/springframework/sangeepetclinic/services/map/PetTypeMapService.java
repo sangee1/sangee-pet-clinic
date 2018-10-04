@@ -2,12 +2,14 @@ package sangee.springframework.sangeepetclinic.services.map;
 
 import java.util.Set;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import sangee.springframework.sangeepetclinic.model.PetType;
 import sangee.springframework.sangeepetclinic.services.PetTypeService;
 
 @Service
+@Profile({"default","map"})
 public class PetTypeMapService extends AbstractMapService<PetType,Long> implements PetTypeService{
 
 	@Override

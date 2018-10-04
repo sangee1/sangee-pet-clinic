@@ -9,10 +9,12 @@ import sangee.springframework.sangeepetclinic.model.Pet;
 import sangee.springframework.sangeepetclinic.model.PetType;
 import sangee.springframework.sangeepetclinic.model.Speciality;
 import sangee.springframework.sangeepetclinic.model.Vet;
+import sangee.springframework.sangeepetclinic.model.Visit;
 import sangee.springframework.sangeepetclinic.services.OwnerService;
 import sangee.springframework.sangeepetclinic.services.PetTypeService;
 import sangee.springframework.sangeepetclinic.services.SpecialtyService;
 import sangee.springframework.sangeepetclinic.services.VetService;
+import sangee.springframework.sangeepetclinic.services.VisitService;
 import sangee.springframework.sangeepetclinic.services.map.OwnerServiceMap;
 import sangee.springframework.sangeepetclinic.services.map.VetServiceMap;
 
@@ -23,13 +25,16 @@ public class DataLoader implements CommandLineRunner{
 	private final VetService vetService;
 	private final PetTypeService petTypeService;
 	private final SpecialtyService specialtyService;
+	private final VisitService visitService;
 	
-	public DataLoader(OwnerService ownerService, VetService vetService,PetTypeService petTypeService,SpecialtyService specialtyService) {
+	public DataLoader(OwnerService ownerService, VetService vetService,
+			PetTypeService petTypeService,SpecialtyService specialtyService,VisitService visitService) {
 		super();
 		this.ownerService = ownerService;
 		this.vetService = vetService;
 		this.petTypeService = petTypeService;
 		this.specialtyService =specialtyService;
+		this.visitService = visitService;
 	}
 
 	
@@ -85,6 +90,14 @@ public class DataLoader implements CommandLineRunner{
        owner2.getPets().add(fionasCat);
        ownerService.save(owner2);
        System.out.println("Loaded Owners....");
+       
+       Visit catVisit = new Visit();
+       catVisit.setPet(fionasCat);
+       catVisit.setDate(LocalDate.now());
+       catVisit.setDescription("Sneezy Kitty");
+
+       visitService.save(catVisit);
+       
        
        Speciality radiology = new Speciality();
        radiology.setDescription("Radiology");

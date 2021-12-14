@@ -9,4 +9,6 @@ public interface VetService {
 	Vet findById(Long id);
 	Vet save(Vet o);
 	Set<Vet> findAll();
+	void delete(Vet v);
+	void deleteById(Long id);
 }

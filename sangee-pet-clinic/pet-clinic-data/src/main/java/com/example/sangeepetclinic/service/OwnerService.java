@@ -1,5 +1,6 @@
 package com.example.sangeepetclinic.service;
 
+import java.util.List;
 import java.util.Set;
 
 import com.example.sangeepetclinic.model.Owner;
@@ -12,5 +13,6 @@ public interface OwnerService {
 	void delete(Owner o);
 	void deleteById(Long id);
 	Set<Owner> findAll();
+	List<Owner> findAllByLastNameLike(String lastName);
 
 }

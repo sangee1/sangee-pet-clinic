@@ -13,6 +13,17 @@ public class BaseEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	
+
+	public BaseEntity() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public BaseEntity(Long id) {
+		super();
+		this.id = id;
+	}
 
 	public Long getId() {
 		return id;

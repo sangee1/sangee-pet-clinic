@@ -34,6 +34,21 @@ public class Pet extends BaseEntity{
 	private Set<Visit> visits = new HashSet<>();
 	
 	
+	public Pet() {
+		// TODO Auto-generated constructor stub
+	}
+	public Pet(Long id) {
+		super(id);
+		// TODO Auto-generated constructor stub
+	}
+	public Pet(String name, PetType petType, Owner owner, LocalDate birthDate, Set<Visit> visits) {
+		super();
+		this.name = name;
+		this.petType = petType;
+		this.owner = owner;
+		this.birthDate = birthDate;
+		this.visits = visits;
+	}
 	public String getName() {
 		return name;
 	}
